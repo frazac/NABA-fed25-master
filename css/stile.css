@@ -1,0 +1,112 @@
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("https://mdn.github.io/shared-assets/fonts/SourceSansPro-Regular.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+  background-color:darksalmon;
+  line-height: 1.7em;
+  font-family: "Source Sans Pro";
+  font-variant-numeric: slashed-zero;
+}
+ul,
+ol {
+  list-style-position: inside;
+  margin-left: 30px;
+  max-width: 650px;
+}
+li {
+  padding-left: 24px;
+  text-indent: -23px;
+  margin-bottom: 12px;
+  border-top: 1px solid rgba(0,0,0,0.25);
+  padding-top: 5px;
+  margin-bottom: 25px;
+  padding-right: 60px;
+}
+body > ul {
+  padding-left: 0;
+  margin-left: 0;
+}
+body > ul > li {
+  padding-right: 0;
+}
+li + li {
+  /* border-top: 1px solid rgba(0,0,0,0.25); */
+}
+li > ul,
+li > ol {
+  margin-top: 20px;
+}
+body > ul > li li {
+  position: relative;
+}
+body > ul > li > ul > li > ul,
+body > ul > li > ul > li > ol {
+  width: calc(452px + 10px);
+}
+body > ul > li > ul > li > ul > li > ul {
+  width: calc(358px + 10px);
+}
+.data-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.4);
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-left: 1px solid rgba(0,0,0,0.25);
+
+  padding-left: 5px;
+  width: 50px;
+  text-indent: 0;  
+}
+.data-label:hover {
+  color: black;
+}
+a:link {
+  display: block;
+  box-sizing: border-box;
+
+  border: 1px solid blue;
+  height: 30px;
+  width: auto;  
+  border-radius: 17px;
+  padding: 5px 17px;
+  margin-top: 6px;
+  margin-bottom: 8px;
+  margin-right: 0;  
+  margin-left: -2px;  
+  text-indent: 0;
+
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 18px;
+  text-decoration: none;
+}
+a:visited {
+  border-color: grey !important;
+  color: grey !important;
+}
+a:hover {
+  background-color: rgb(255,255,255);
+}
+a.referenza {}
+a.tutorial {
+  border-color: purple;
+  color: purple;
+}
+a.approfondimento {}
+
+span.es {
+  border: 1px solid lightcoral;
+  border-radius: 9px;
+  padding: 3px 6px;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: darkred;
+  white-space: nowrap;
+}

@@ -1,0 +1,219 @@
+<head>
+  <link rel="stylesheet" href="css/stile.css">
+  <script src="js/Autolinker.js"></script>
+  <script src="js/main.js"></script>
+  <title>LA TRACCIA</title>
+</head>
+
+<body>
+  <h1>LA TRACCIA</h1>
+  <h2>NABA FED 2024</h2>
+  <h2>Front-end development — A.a. 2023/24 — Semestre 2</h2>
+  <ul>
+    <li>introduzione
+      <ul>
+        <li>presenza attiva</li>
+        <li>seminario — esercitazioni in sincrono — esercitazioni asincrone</li>
+        <li>licenza aperta <a target="_blank" href="https://choosealicense.com/licenses/mit/">Vedi →</a></li>
+        <li>l'abbreviazione fa riflettere sulla posizione del docente <a target="_blank" href="https://www.reddit.com/r/angular/comments/m5z03l/whats_a_fed_in_the_context_of_software_development/#:~:text=Everyone%20knows%20the%20term%20%E2%80%9Cfront,most%20haven't%20heard%20of.">Vedi →</a></li>
+      </ul>
+    </li>
+    <li>metodologia
+      <ul>
+        <li class="punto-bianco" id="punto-1">iterazione<div class="etichetta-data">#Data01</div></li>
+        <li class="punto-bianco" id="punto-2">comunità dei pari<div class="etichetta-data">#Data01</div></li>
+        <li class="punto-rosso" id="punto-3">comunità degli esperti<div class="etichetta-data">#Data01</div></li>
+        <li>setting
+          <ul>
+            <li>visual studio code<div class="etichetta-data">#Data01</div></li>
+            <li>browser (meglio 2)<div class="etichetta-data">#Data01</div></li>
+            <li>canale di comunicazione tra studenti d'aula (whatsapp? telegram?)<div class="etichetta-data">#Data01</div></li>
+            <li>radice / nidificazione / root / folders<div class="etichetta-data">#Data01</div></li>
+            <li>github
+              <div class="etichetta-data">#Data01</div>
+              <ul>
+                <li>nome utente: libero</li>
+                <li>repository name: NABA-fed24-nomeDiBattesimo<br>(le omonimie si dovranno risolvere in aula da parte degli studenti)</li>
+                <li>configurazione di GitHub Pages <a target="_blank" href="https://pages.github.com/">Vedi →</a></li>
+                <li>tutti i repositories degli studenti saranno pubblici e condivisi con la classe (quindi fatevi una cartella sandbox da tenere privata)</li>
+                <li>README.md #avanzato <a target="_blank" href="https://www.markdownguide.org/basic-syntax/">Vedi →</a></li>
+                <li>clona il repository delle dispense #avanzato #FIXME</li>
+                <!-- FIXME -->
+              </ul>
+            </li>
+            <li>Le scorciatoie da tastiera: è importante che ognuno cerchi le proprie in autonomia.  <a target="_blank" href="https://support.apple.com/en-mn/guide/mac-help/cpmh0038/mac">Un esempio per il mac →</a><div class="etichetta-data">#Data12</div></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>html
+      <ul>
+        <li>sintassi <a target="_blank" href="https://www.google.com/search?q=html+syntax&sxsrf=AJOqlzX8J4x1h-smvHOFTf1Akp5a5oii2A:1678204976278&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiWreLbmMr9AhXLsaQKHfNMD6cQ_AUoAXoECAEQAw&biw=1440&bih=821&dpr=2">Vedi →</a><div class="etichetta-data">#Data01</div></li>
+        <li>doctype e struttura html di base <a target="_blank" href="https://www.w3schools.com/tags/tag_doctype.asp">Vedi →</a><div class="etichetta-data">#Data02</div></li>
+        <li>head / body <a target="_blank" href="https://www.w3schools.com/html/html_intro.asp">Vedi →</a> <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#anatomy_of_an_html_document">Vedi →</a><div class="etichetta-data">#Data02</div></li>
+        <li>div <div class="etichetta-data">#Data02</div></li>
+        <li>Per collegare il foglio di stile css: link / style tag / style attribute <div class="etichetta-data">#Data02</div></li>
+        <li>indirizzo: URI / URL / PATH<div class="etichetta-data">#Data02</div></li>
+        <li>I browser leggono HTML. HTML descrive il contenuto. HTML è struttura.<div class="etichetta-data">#Data02</div></li>
+        <li>class e id<div class="etichetta-data">#Data02</div></li>
+        <li>box principali: nav, main, header, footer, aside<div class="etichetta-data">#Data02</div></li>
+        <li>si comportano come blocchi (block elements)<div class="etichetta-data">#Data04</div>
+          <ul>
+            <li>div</li>
+            <li>blocchi di testo e intestazioni: p, h1, h2, h3, (ecc.)</li>
+            <li>liste: ul, ol e similari <a target="_blank" href="https://www.w3schools.com/html/html_lists.asp">Vedi →</a></li>
+          </ul>
+        </li>
+        <li>si comportano come testi in linea (inline elements)<div class="etichetta-data">#Data04</div>
+          <ul>
+            <li>a (vedi sotto alcune note*)</li>
+            <li>span</li>
+            <li>strong</li>
+            <li>em</li>
+            <li>img</li>
+          </ul>
+        </li>
+        <li>I font sono files. Quindi o li ha l'utente nel proprio terminale o li distribuisce il server. Ne consegue che se volessimo un font personalizzato o particolare dobbiamo distribuirlo. Come aggiungere font personalizzati? Ormai la soluzione tecnica usata da tutti è @font-face. Ma come si fa? Tre alternative. <a class="tutorial" target="_blank" href="https://www.w3schools.com/cssref/css3_pr_font-face_rule.php">Vedi →</a><div class="etichetta-data">#Data05</div>
+          <ol>
+            <li>Abbiamo i file del font in locale già pronti per l'utilizzo sul web (sono webfont normalmente con formato Woff). Allora li mettiamo in una cartella e vi puntiamo con la regola @font-face. Nonostante le istruzioni che si possono trovare online è sufficiente soltanto il formato Woff (e non Woff2, per cui è necessario avere anche Woff per ragioni di compatibilità). <a target="_blank" href="https://www.w3schools.com/cssref/css3_pr_font-face_rule.php">Vedi →</a> <a target="_blank" href="https://support.fontspring.com/hc/en-us/articles/10244632607259-How-do-I-use-the-webfonts">Tutorial →</a></li>
+            <li>Abbiamo uno o più file font, la licenza è adatta per la condivisione su web, ma il file font non è in formato per i browser del web (ovvero woff). Si può usare Font Squirrel per convertire i tuoi font in un formato compatibile con il web. Dopodiché segui il punto 1. <a target="_blank" href="https://www.fontsquirrel.com/tools/webfont-generator">Vedi →</a> <a target="_blank" href="https://www.youtube.com/watch?v=kUXJApInDWA">Tutorial →</a></li>
+            <li>Utilizziamo un servizio online come Google oppure Adobe Font. In questo caso @font-face ma non lo vediamo nel nostro codice.
+              <ul>
+                <li>Con Google Font (gratuito): <a target="_blank" href="https://fonts.google.com/">Vedi →</a> <a class="tutorial" target="_blank" href="https://developers.google.com/fonts/docs/getting_started?hl=it">Tutorial →</a> <a target="_blank" class="approfondimento" href="https://fonts.google.com/knowledge">Approfondimento →</a></li>
+                <li>Con Adobe Font (a pagamento): <a target="_blank" href="https://helpx.adobe.com/it/fonts/get-started.html">Vedi →</a> <a class="tutorial" target="_blank" href="https://www.youtube.com/watch?v=R9O6BXCs1sY">Tutorial →</a></li>
+              </ul>
+  
+            </li>
+          </ol>
+        </li>  
+        <li>Box model: "All HTML elements can be considered as boxes." <a target="_blank" href="https://www.w3schools.com/css/css_boxmodel.asp">Vedi →</a> <a target="_blank" class="approfondimento" href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model">Approfondimento →</a> <a target="_blank" href="https://frazac.github.io/NABA-fed24-francesco/es07/index-dimostrazione-box-model.html">Vedi esercizio inerente →</a><div class="etichetta-data">#Data06</div></li>
+        <li id="tag-a">Tag a, cioè il tag per fare hyper-link! va considerato che i link hanno diversi stati di interazione: stand-by, mouse sopra, link visitati e anche altri. <a href="#tag-a-stile">Vedi sotto per CSS</a> <a target="_blank" href="https://www.w3schools.com/tags/tag_a.asp">Vedi →</a> <a target="_blank" class="approfondimento" href="https://m3.material.io/foundations/interaction/states">Approfondimento →</a></li>
+      </ul>
+    </li>
+    <li>css
+      <ul>
+        <li>sintassi <a target="_blank" href="https://www.google.com/search?q=css+syntax&sxsrf=AJOqlzUSr7kYFjlfwxQ8_EENpBr-8kvfyw:1678205251243&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiizPDemcr9AhXWcvEDHR67BF4Q_AUoAXoECAEQAw&biw=1440&bih=821&dpr=2">Vedi →</a><div class="etichetta-data">#Data01</div>
+        </li>
+        <li>chiamate CSS: esterne vs interne vs "inline" (via attributo style)<div class="etichetta-data">#Data03</div>
+        </li>
+        <li>capire cosa sono i css: W3C senza css. Vedi la homepage di NABA (21.04.2024) senza stili né script. <a target="_blank" href="naba.html">Vedi →</a><div class="etichetta-data">#Data12</div>
+        </li>
+        <li>selettori <a target="_blank" href="https://www.w3schools.com/csSref/css_selectors.php">Vedi →</a>
+          <ul>
+            <li>chiamata con il . (punto) = attributo class <a target="_blank" href="https://www.w3schools.com/csSref/sel_class.php">Vedi →</a><div class="etichetta-data">#Data02</div></li>
+            <li>chiamata con il # (cancelletto) = attributo id <a target="_blank" href="https://www.w3schools.com/csSref/sel_id.php">Vedi →</a><div class="etichetta-data">#Data02</div></li>
+            <li>selettori: gerarchia e specificità: è una questione di priorità <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">Vedi →</a><div class="etichetta-data">#Data02</div></li>
+            <li>pseudo selettori:<br>:first-child<a target="_blank" href="https://www.w3schools.com/csSref/sel_firstchild.php">Vedi →</a>:last-child<a target="_blank" href="https://www.w3schools.com/csSref/sel_last-child.php">Vedi →</a>:not(.selettore)<a target="_blank" href="https://www.w3schools.com/csSref/sel_not.php">Vedi →</a><div class="etichetta-data">#Data13</div></li>
+            <li>lo pseudo selettore :nth-child(n) <a target="_blank" href="https://www.w3schools.com/cssref/sel_nth-child.php">Vedi →</a>  <a target="_blank" class="approfondimento" href="https://css-tricks.com/useful-nth-child-recipies/">Approfondimento (recipes) →</a><div class="etichetta-data">#Data13</div></li>
+          </ul>
+        </li>
+        <li>unità di misura lineari "assolute" <a target="_blank" href="https://www.w3schools.com/cssref/css_units.php">Vedi →</a><div class="etichetta-data">#Data04</div>
+          <ul>
+            <li>px, pixel</li>
+          </ul>
+        </li>
+        <li>unità di misura lineari relative <a target="_blank" href="https://www.w3schools.com/cssref/css_units.php">Vedi →</a><div class="etichetta-data">#Data04</div>
+          <ul>
+            <li>em, da "em quad", è una unità di misura relativa</li>
+            <li>rem, da "em quad" con una differenza fondamentale: è relativo sempre alla dimensione data al tag html</li>
+            <li>%, percentuale relativa al position: relative più prossimo</li>
+            <li>vh e vw, misure percentuali relative al viewport</li>
+          </ul>
+        </li>
+        <li>funzione di calcolo di css (e altre funzioni) <a target="_blank" href="https://www.w3schools.com/cssref/func_calc.php">Vedi →</a><div class="etichetta-data">#Data13</div></li>
+        </li>
+        <li>position  <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning">Vedi →</a><div class="etichetta-data">#Data04</div>
+          <ul>
+            <li>static</li>
+            <li>relative</li>
+            <li>absolute</li>
+            <li>z-index</li>
+            <li>fixed e sticky</li>
+          </ul>
+        </li>
+        <li>float  <div class="etichetta-data">#Data04</div></li>
+        <li>border <div class="etichetta-data">#Data04</div></li>
+        <li>background <div class="etichetta-data">#Data04</div></li>
+        <li id="tag-a-stile">Tag a, aspetti grafici e il corretto ordine:<a target="_blank" href="https://www.w3schools.com/css/css_link.asp">Vedi →</a> <a href="#tag-a">Vedi sopra per HTML</a>
+          <ul>
+            <li>a:link - un normale link non visitato</li>
+            <li>a:visited - un link che l'utente ha già visitato</li>
+            <li>a:hover - un link quando il mouse ci passa sopra</li>
+            <li>a:active - un link nel momento in cui viene cliccato</li>
+          </ul> 
+        </li>
+        <li>media queries <div class="etichetta-data">#Data06</div>
+          <a target="_blank" href="https://www.w3schools.com/css/css_rwd_mediaqueries.asp">Vedi →</a>
+          <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Vedi su mozilla →</a>
+          <a target="_blank" href="https://alistapart.com/article/responsive-web-design/" class="approfondimento">Approfondimento →</a>
+          <a target="_blank" href="https://htmldog.com/guides/css/advanced/mediaqueries/" class="approfondimento">Approfondimento →</a>
+        </li>
+        <li>movimento!
+          <div class="etichetta-data">#Data10</div>
+          <ul>
+            <li>transitions <a target="_blank" href="https://www.w3schools.com/css/css3_transitions.asp">Vedi →</a></li>
+            <li>animations <a target="_blank" href="https://www.w3schools.com/css/css3_animations.asp">Vedi →</a></li>
+            <li>Differenza tra transition e animation <a target="_blank" href="https://www.geeksforgeeks.org/difference-between-animation-and-transition-in-css/">Vedi →</a></li>
+          </ul>
+        </li>
+        <li>flexbox (display: flex;) <a target="_blank" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Vedi →</a>
+          <a target="_blank" class="approfondimento" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-more-sources">Approfondimento →</a>
+          <a target="_blank" class="approfondimento" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-more-information">Approfondimento →</a>
+          <a class="tutorial" target="_blank" href="https://www.youtube.com/watch?v=I5dd1uEAE4E">Tutorial video 4'11'' →</a>
+          <div class="etichetta-data">#Data12</div>
+          <ul>
+            <li>lo strumento di Google Chrome per testare le diverse impostazioni di flexbox <a target="_blank" href="https://developer.chrome.com/docs/devtools/css/flexbox">Vedi →</a></li>
+            <li>flex direcion (main axis e cross axix), start, end e altre terminologie <a target="_blank" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-basics-and-terminology">Vedi →</a></li>
+            <li>justify-content (allineamento main axis) <a target="_blank" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-justify-content">Vedi →</a></li>
+            <li>align-items (allineamento cross axis) <a target="_blank" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-align-items">Vedi →</a></li>
+            <li>flex-wrap <a target="_blank" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-flex-wrap">Vedi →</a></li>
+            <li>flex-grow <a target="_blank" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-flex-grow">Vedi →</a></li>
+          </ul>
+        </li>
+        <li>Grid with css (display: grid;) <a target="_blank" href="https://www.w3schools.com/css/css_grid.asp">Vedi →</a><div class="etichetta-data">#Data11</div></li>
+        <li>Differenza tra flexbox e grid <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout#:~:text=A%20simple%20question,use%20a%20grid">Vedi →</a> <a target="_blank" href="https://frazac.github.io/NABA-fed24-francesco/es10/">Vedi un esercizio sul tema →</a><div class="etichetta-data">#Data11</div></li>
+        <li>Regolazione della visibilità di elementi più grandi del loro contenitore: overflow <a target="_blank" href="https://www.w3schools.com/css/css_overflow.asp">Vedi →</a></li>
+        <li>Come faccio 3 colonne? <div class="etichetta-data">#Data13</div>
+          <ul>
+            <li>Metodo 1: flexbox  <a target="_blank" href="https://frazac.github.io/NABA-fed24-francesco/es00-6-colonne/">Vedi →</a></li>
+            <li>Metodo 2: grid</li>
+            <li>Metodo 3: float (obsoleto)</li>
+            <li>Metodo 4: position (inefficace)</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>scss/sass
+      <ul>
+        <li>sintassi <a target="_blank" href="https://sass-lang.com/guide">Vedi →</a><div class="etichetta-data">#Data12</div></li>
+        <li>alternative: less <a target="_blank" href="https://lesscss.org/">Vedi →</a>, Stylus <a target="_blank" href="https://stylus-lang.com/">Vedi →</a>, PostCSS <a target="_blank" href="https://postcss.org/">Vedi →</a><div class="etichetta-data">#Data12</div></li>
+        <li>compilatore: Scout App <a target="_blank" href="https://scout-app.io/">Vedi →</a><div class="etichetta-data">#Data12</div></li>
+      </ul>
+    </li>
+    <li>javascript
+      <ul>
+        <li>sintassi <a target="_blank" href="https://www.google.com/search?q=jquery+syntax&tbm=isch&ved=2ahUKEwioss6mmsr9AhV7xgIHHRAPBzUQ2-cCegQIABAA&oq=jquery+syntax&gs_lcp=CgNpbWcQAzIFCAAQgAQyBwgAEIAEEBgyBwgAEIAEEBgyBwgAEIAEEBgyBwgAEIAEEBgyBwgAEIAEEBgyBwgAEIAEEBgyBwgAEIAEEBgyBwgAEIAEEBgyBwgAEIAEEBg6BAgjECc6BggAEAcQHlDxUljsVmCHWWgBcAB4AIABUIgBrwOSAQE3mAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=2WEHZOjhKPuMi-gPkJ6cqAM&bih=821&biw=1440">Vedi →</a><div class="etichetta-data">#Data01</div></li>
+      </ul>
+    </li>
+    <li>esercitazioni
+      <ul>
+        <li>esercizio della bandiera <span class="es">#es-01</span> <span class="es">#es-02</span><div class="etichetta-data">#Data03</div>
+          <ol>
+            <li>scegli una bandiera nazionale</li>
+            <li>rappresenta la bandiera su browser tramite il codice html e css</li>
+            <li>condividi con il tuo repository github <span class="es">#es-01</span></li>
+            <li>inventa una nuova bandiera non nazionale oppure utopica e condividila <span class="es">#es-02</span> <a class="referenza" target="_blank" href="https://madeprogram.it/progetti/flags">Referenza →</a></li>
+          </ol>
+        </li>
+        <li>disegna una nave <span class="es">#es-03</span>: utilizza un software grafico (Illustrator?), utilizza soltanto rettangoli o cerchi neri su fondo bianco<div class="etichetta-data">#Data03</div></li>
+        <li>disegna "5 forme facili" <span class="es">#es-04</span>: pensa a un set di 5 oggetti semplici (per esempio il set per aperitivo: bicchiere, cannuccia, shaker, fetta di limone, oliva.), disegnali con gli stessi elementi del precedente esercizio più il triangolo. Referenze di ricerca: <a class="referenza" target="_blank" href="https://www.are.na/kelli-reagan/paul-elliman--2">Referenza →</a><a class="referenza" target="_blank" href="https://www.pinterest.it/pin/150096600072975707/">Referenza →</a><div class="etichetta-data">#Data03</div></li>
+        <li>riproduci l'oggetto dell'esercizio 03 in codice <span class="es">#es-05</span><div class="etichetta-data">#Data03</div></li>
+        <li>fai una impaginazione con intestazione, footer, colonna principale e secondarie laterali utilizzando gli appositi tag. <span class="es">#es-06</span><div class="etichetta-data">#Data07</div></li>
+        <li>impagina i cinque oggetti facili utilizzando flex-box e le media queries per il responsive design. con almeno 3 breakpoint. <span class="es">#es-07</span><div class="etichetta-data">#Data08</div></li>
+        <li>incominciamo a pensare al progetto finale per il corso. chiamiamolo "PROGETTO FINALE". tema: l'alfabeto. puoi declinare il tema in senso tipografico (per esempio disegnare un carattere e impaginare su html le specimen) oppure interpretare il tema in altro modo. risultato atteso per la fine del corso: una pagina html in responsive design in cui appare realizzato il concept studiato. obiettivo per questo esercizio corrente: incomincia a scrivere un documento di lavoro su html che contenga referenze di ricerca, uno o più concept espressi in frase e/o disegni, linee di lavoro per l'output finale, insomma un documento preliminare di progetto. deadline per il corrente esercizio (il piano e non la pagina finale): la data 10 del corso, quando ci vedremo in presenza. <span class="es">#es-08</span><div class="etichetta-data">#Data09</div></li>
+        <li>fai una animazione sia transition che animation. muovi qualcosa! <span class="es">#es-09</span><div class="etichetta-data">#Data10</div></li>
+        <li>fai una scheda dell'esercizio finale impaginando una tabella con dati utili (es. target, tono di voce, linguaggio, tempi di realizzazione, ecc.). poi impagina questi dati tabellari usando prima flexbox e poi grid, come nell'esercizio del prof. <span class="es">#es-10</span><div class="etichetta-data">#Data11</div></li>
+      </ul>
+    </li>
+  </ul>
+</body>
