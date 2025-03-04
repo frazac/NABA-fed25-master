@@ -7,4 +7,4 @@ semester II
 
 welcome!
 
-[frazac/naba-fed24 @GitHub Pages](https://frazac.github.io/NABA-fed25-master/)
+with Github Pages: [@frazac /naba-fed25](https://frazac.github.io/NABA-fed25-master/)
