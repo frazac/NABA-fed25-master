@@ -1,0 +1,13 @@
+body {
+    background-color: aqua;
+}
+div {
+    /* border: 1px solid red; */
+    /* please memorise that you can have compact and splitted properties */
+}
+.tooth-disease {
+    font-weight:  bold;
+}
+span {
+    color: red;
+}
