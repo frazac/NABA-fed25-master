@@ -10,22 +10,31 @@ body {
   line-height: 1.7em;
   font-family: "Source Sans Pro";
   font-variant-numeric: slashed-zero;
+  padding: 0 50px;
 }
-ul,
+ul {
+  list-style: none;
+  list-style-position: inside;
+  margin: 0;
+  max-width: 650px;
+  padding: 0;
+}
 ol {
   list-style-position: inside;
   margin-left: 30px;
   max-width: 650px;
 }
-li {
+ul > li {
   padding-left: 24px;
   text-indent: -23px;
   margin-bottom: 12px;
-  border-top: 1px solid rgba(0,0,0,0.25);
+  border-top: 1px solid rgba(255,0,0,0.25);
   padding-top: 5px;
   margin-bottom: 25px;
-  padding-right: 60px;
+  /* padding-right: 60px; */
+  position: relative;
 }
+ul > li:not(ul > li li) {}
 body > ul {
   padding-left: 0;
   margin-left: 0;
@@ -57,11 +66,10 @@ body > ul > li > ul > li > ul > li > ul {
   position: absolute;
   right: 0;
   top: 0;
-  border-left: 1px solid rgba(0,0,0,0.25);
-
+  border-left: 1px solid rgba(255,0,0,0.25);
   padding-left: 5px;
   width: 50px;
-  text-indent: 0;  
+  text-indent: 0;
 }
 .data-label:hover {
   color: black;
@@ -69,18 +77,16 @@ body > ul > li > ul > li > ul > li > ul {
 a:link {
   display: block;
   box-sizing: border-box;
-
   border: 1px solid blue;
   height: 30px;
-  width: auto;  
+  width: auto;
   border-radius: 17px;
   padding: 5px 17px;
   margin-top: 6px;
   margin-bottom: 8px;
-  margin-right: 0;  
-  margin-left: -2px;  
+  margin-right: 0;
+  margin-left: -2px;
   text-indent: 0;
-
   white-space: nowrap;
   text-transform: uppercase;
   font-size: 13px;
@@ -109,4 +115,50 @@ span.es {
   font-size: 14px;
   color: darkred;
   white-space: nowrap;
+}
+.col-wrapper {
+  display: flex;
+}
+.col {
+  width: 48%;
+}
+.col1 {
+  margin-right: 4%;
+  padding-right: 2%;
+  border-right: 1px solid rgba(255,0,0,0.25);
+}
+.col2 {
+  padding-left: 2%;
+  border-top: 1px solid rgba(255,0,0,0.25);
+}
+.accordion {
+  cursor: pointer;
+}
+.accordion:hover {
+  color: blue;
+  border-top: 1px solid white;
+}
+.accordion::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  top: 6px;
+  display: block;
+
+}
+.accordion.active::after {
+  content: '–';
+}
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.accordion.active .panel {
+  max-height: 100vh;
+  overflow-y: visible;
+}
+.disable {
+  opacity: 0.3;
+  text-decoration: line-through;
 }
