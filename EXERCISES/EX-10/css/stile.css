@@ -1,3 +1,62 @@
 body {
     background-color: burlywood;
+    padding-top: 40px;
+}
+.container {
+    /* we need position:relative to give correct origin to
+    the position: absolute son's property */
+    position: relative;
+    border: 1px solid white;
+    height: 900px;
+}
+.container .son {
+    border: 1px solid black;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+/* hierarcy experimentations, please spippolate */
+.static {
+    position: static;    
+    background-color: red !important;
+}
+.container > .son.static {
+    background-color: green;
+}
+/* let's test positions options */
+.static {
+    /* background-color: blue; */
+}
+.relative {
+    position: relative;
+    top: 5px;
+    left: 100px;
+}
+.absolute {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: white;
+}
+.fixed {
+    position: fixed;
+    top: -10px;
+    left: -10px;
+    width: 100% !important;
+    height: 40px !important;
+    background-color: chocolate;
+    color: white;
+    border: none !important;
+
+    /* check if compatible */
+    /* https://caniuse.com/css-boxshadow */
+    box-shadow: 5px 3px 12px 8px rgba(233,161,66,0.61);
+}
+.container2 .son {
+    background-color: lightcyan !important;
+}
+.container2 > .son {
+    background-color: crimson !important;
 }
