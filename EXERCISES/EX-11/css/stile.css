@@ -1,0 +1,28 @@
+body {
+    background-color: ivory;
+}
+dl {
+    border: 1px solid black;
+}
+dd {
+    margin: 0;
+    font-weight: bold;
+
+}
+dt {
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+.top-line {
+    border-top: 2px solid red;
+}
+hr {
+    border-top: 1px solid red;
+    border-bottom: 1px solid blue;
+}
+header,
+.testata {
+    color: red;
+    border: 1px solid purple;
+    height: 50px;
+}
