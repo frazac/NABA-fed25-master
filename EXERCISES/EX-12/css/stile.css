@@ -25,7 +25,7 @@ h1 {color: crimson;}
 #hexagon {
     width: 100px;
     height: 57.735px;
-    background: yellow;
+    /* background: yellow; */
     position: relative;
 
     display: flex;
@@ -34,11 +34,26 @@ h1 {color: crimson;}
     flex-wrap: wrap;
     align-content: center;
 
+    animation-name: cambiacolore;
+    animation-duration: 4s;  
+    animation-iteration-count: infinite;
+    position: relative;
+    margin-left: 100px;
+
+
 }
+
+@keyframes cambiacolore {
+    0%      {background-color: red;     left: 0; }
+    33.33%  {background-color: yellow;  left: 100px;}
+    66.66%  {background-color: blue;    left: -100px;}
+    100%    {background-color: red;     left: 0;}
+}
+
 #hexagon::before {
     content: "";
     position: absolute;
-    top: -28px;
+    top: -28.5px;
     left: 0;
     width: 0;
     height: 0;
@@ -49,7 +64,7 @@ h1 {color: crimson;}
 #hexagon::after {
     content: "";
     position: absolute;
-    bottom: -29px;
+    bottom: -28px;
     left: 0;
     width: 0;
     height: 0;
@@ -62,3 +77,5 @@ h1 {color: crimson;}
     text-align: center;
 
 }
+
+  
