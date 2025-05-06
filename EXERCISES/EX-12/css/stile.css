@@ -1,0 +1,64 @@
+h1 {color: crimson;}
+.cerchio {
+    border: 2px solid purple;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    transition: all 2s;
+    margin-bottom: 60px;
+
+}
+.cerchio:hover {
+    width: 200px;
+    transform: rotate(360deg);
+}
+.cerchio div {
+    color: brown;
+    width: 100%;
+    text-align: center;
+}
+#hexagon {
+    width: 100px;
+    height: 57.735px;
+    background: yellow;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+
+}
+#hexagon::before {
+    content: "";
+    position: absolute;
+    top: -28px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 28.8675px solid  blue;
+}
+#hexagon::after {
+    content: "";
+    position: absolute;
+    bottom: -29px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 28.8675px solid red;
+}
+#hexagon div {
+    width: 100%;
+    text-align: center;
+
+}
