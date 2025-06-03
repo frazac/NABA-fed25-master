@@ -25,7 +25,8 @@ img.first-test {
 }
 img.second-test {
     display: block;
-    max-width: 480px;
+    /* max-width: 480px; */
+    width: 480px;
     height: auto;
     margin-top: 40px;
 }
@@ -45,5 +46,11 @@ picture.third-test img {
     picture.third-test {
         max-width: 60%;
     }
-    
+}
+@media screen and (min-width: 999px) {
+    img.second-test {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
 }
