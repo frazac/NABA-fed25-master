@@ -1,0 +1,9 @@
+body {
+    background-color: ivory
+}
+video {
+    width: 800px;
+    height: 400px;
+    display: block;
+    margin: 0 auto;
+}
