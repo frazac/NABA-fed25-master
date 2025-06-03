@@ -7,3 +7,19 @@ video {
     display: block;
     margin: 0 auto;
 }
+
+.ytvideo iframe {
+    width: 800px;
+    /* height: 400px; */
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px;
+    aspect-ratio: 2/1;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-top: 40px;
+}

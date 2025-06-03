@@ -8,12 +8,23 @@
 </head>
 <body>
     <h1>Video and responsive image test</h1>
-    
+
     <video autoplay controls loop>
         <!-- <source src="video/test.mp4" type="video/mp4"> -->
         <source src="https://prnewswire2-a.akamaihd.net/p/1893751/sp/189375100/serveFlavor/entryId/1_wk8iji4j/flavorId/1_khijx4f9/prn_folder/MNR/prn_id/Publish+Order+Part%3a+3843125-99+file+identifier%3a+3997767/prn_flavor/Source/prn_filename/FabricaDeArteAmericas" type="video/mp4">
         Il tuo browser non supporta il tag video.
     </video>
+
+    <div class="ytvideo"><iframe src="https://www.youtube.com/embed/ovRKVH_gMjM?si=iTkOcrd7yUMIeuxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+
+    <!-- <img src="img/port-original.jpg" alt="National Portrait Gallery"> -->
+
+    <img
+        srcset="img/port-original@0.5x.jpg 480w, img/port-original.jpg 800w"
+        sizes="(max-width: 600px) 480px, 800px"
+        
+        alt="National Portrait Gallery" />
+
 
 </body>
 </html>
