@@ -17,9 +17,33 @@ video {
     aspect-ratio: 2/1;
 }
 
-img {
+img.first-test {
     display: block;
     max-width: 100%;
     height: auto;
     margin-top: 40px;
+}
+img.second-test {
+    display: block;
+    max-width: 480px;
+    height: auto;
+    margin-top: 40px;
+}
+picture.third-test {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+picture.third-test source,
+picture.third-test img {
+    width: 100%;
+    height: auto;
+}
+@media screen and (max-width: 799px) {
+    picture.third-test {
+        max-width: 60%;
+    }
+    
 }

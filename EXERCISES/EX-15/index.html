@@ -17,21 +17,22 @@
 
     <div class="ytvideo"><iframe src="https://www.youtube.com/embed/ovRKVH_gMjM?si=iTkOcrd7yUMIeuxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 
-    <!-- <img src="img/port-original.jpg" alt="National Portrait Gallery"> -->
+    <!-- <img class="first-test" src="img/port-original.jpg" alt="National Portrait Gallery"> -->
 
-
-<p>the image will change at 800px viewport width</p>
-    <picture>
+    <p>the image will change at 800px viewport width</p>
+    <picture class="third-test">
         <source media="(max-width: 799px)" srcset="img/port-closeup.jpg" />
         <source media="(min-width: 800px)" srcset="img/port-original.jpg" />
         <img src="img/port-original.jpg" alt="Chris standing up holding his daughter Elva" />
     </picture>
 
     <!-- I have to fix! FIXME -->
-        <!-- <img
+    <!-- <p>FIXME</p>
+    <img class="second-test"
         srcset="img/port-mobile.jpg 480w, img/port-original.jpg 800w"
         sizes="(max-width: 600px) 480px, 800px"
         src="img/port-original.jpg"
         alt="National Portrait Gallery" /> -->
+
 </body>
 </html>
