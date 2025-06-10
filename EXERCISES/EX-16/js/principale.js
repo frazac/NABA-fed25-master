@@ -5,9 +5,15 @@ document.addEventListener('DOMContentLoaded', function() {
     var block = document.getElementById('pippo');
 
     block.addEventListener('click', function() {
-    console.log(block);
-    if (block.getAttribute('class') == 'red') block.setAttribute('class', 'blue');
-    else block.setAttribute('class', 'red');
+        console.log(block);
+    if (block.getAttribute('class') == 'red') {
+        block.setAttribute('class', 'blue');
+    } else {
+        block.setAttribute('class', 'red');
+    }
+
+
+
     });
 
 });
