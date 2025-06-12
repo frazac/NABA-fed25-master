@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
             block.setAttribute('class', 'red');
         }
 
-
         // document.getElementsByClassName('un-buon-partito')[0].setAttribute('class', 'un-partito-migliore');
 
         // Esegui un'operazione su tutti gli elementi con la classe 'un-buon-partito'
